@@ -8,7 +8,8 @@ If you want to install AngleOperations do `git clone https://github.com/hearot/A
 ## How to use
 
 AngleOperations is a static class, then you can call it in this way for example:
-```$addition = AngleOperations::addition('86 degrees 40 primes 30 seconds', '70 degrees 51 primes 17 seconds');
+```
+$addition = AngleOperations::addition('86 degrees 40 primes 30 seconds', '70 degrees 51 primes 17 seconds');
 ```
 
 ## Documentation
