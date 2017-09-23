@@ -1,0 +1,22 @@
+{
+    "name": "hearot/AngleOperations",
+    "type": "library",
+    "description": "PHP class that does arithmetic operations with degrees, primes and seconds.",
+    "keywords": ["angles","angle","php","operations","mathematics","arithmetic"],
+    "homepage": "https://github.com/hearot/AngleOperations",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Hearot",
+            "email": "gabriel@hearot.it",
+            "homepage": "https://hearot.it",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5"
+    },
+    "autoload": {
+        "files": ["src/AngleOperations.php"]
+    }
+}
