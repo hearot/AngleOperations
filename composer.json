@@ -1,5 +1,5 @@
 {
-    "name": "hearot/AngleOperations",
+    "name": "hearot/angleoperations",
     "type": "library",
     "description": "PHP class that does arithmetic operations with degrees, primes and seconds.",
     "keywords": ["angles","angle","php","operations","mathematics","arithmetic"],
