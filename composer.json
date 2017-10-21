@@ -17,6 +17,8 @@
         "php": ">=5"
     },
     "autoload": {
-        "files": ["src/AngleOperations.php"]
+      "psr-0": {
+        "hearot\\AngleOperations\\": "src/"
+      }
     }
 }
