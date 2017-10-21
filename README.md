@@ -23,7 +23,7 @@ composer update
 
 AngleOperations is a static class, then you can call it in this way, for example:
 ```php
-$addition = AngleOperations::addition('86 degrees 40 primes 30 seconds', '70 degrees 51 primes 17 seconds');
+$addition = \hearot\AngleOperations\AngleOperations::addition('86 degrees 40 primes 30 seconds', '70 degrees 51 primes 17 seconds');
 ```
 
 ### Methods
