@@ -31,7 +31,7 @@ class AngleOperations
      * @param string $addend
      * @param string $second_addend
      * @param boolean $normal_form If you want to get the result as normal form
-     * @param boolean $over_360 If you want to get the result without editing its if it's over 360
+     * @param boolean $over_360 If you want to get the result without editing it if it's over 360
      * @return string
      */
     public static function addition($addend = 0, $second_addend = 0, $normal_form = true, $over_360 = false)
@@ -80,7 +80,7 @@ class AngleOperations
      * @param string $minuend
      * @param string $subtrahend
      * @param boolean $normal_form If you want to get the result as normal form
-     * @param boolean $over_360 If you want to get the result without editing its if it's over 360
+     * @param boolean $over_360 If you want to get the result without editing it if it's over 360
      * @return string
      */
     public static function subtraction($minuend = 0, $subtrahend = 0, $normal_form = true, $over_360 = false)
@@ -129,7 +129,7 @@ class AngleOperations
      * @param string $factor
      * @param string $second_factor
      * @param boolean $normal_form If you want to get the result as normal form
-     * @param boolean $over_360 If you want to get the result without editing its if it's over 360
+     * @param boolean $over_360 If you want to get the result without editing it if it's over 360
      * @return string
      */
     public static function multiplication($factor = 0, $second_factor = 0, $normal_form = true, $over_360 = false)
@@ -178,7 +178,7 @@ class AngleOperations
      * @param string $dividend
      * @param string $divisor
      * @param boolean $normal_form If you want to get the result as normal form
-     * @param boolean $over_360 If you want to get the result without editing its if it's over 360
+     * @param boolean $over_360 If you want to get the result without editing it if it's over 360
      * @return string
      */
     public static function division($dividend = 0, $divisor = 0, $normal_form = true, $over_360 = false)
