@@ -1,12 +1,13 @@
 <?php
+
 namespace hearot\AngleOperations;
 
 /**
  *  The AngleOperations class is used to do operations
  *  with degrees, primes and seconds.
  * @author Hearot
- * @copyright 2017
- * @license GNU Affero General Public License
+ * @copyright 2019
+ * @license AGPL-3.0-or-later
  */
 class AngleOperations
 {
@@ -15,7 +16,7 @@ class AngleOperations
      *
      * @param string $first
      * @param string $second
-     * @return array
+     * @return array|bool
      */
     private static function getNumbers($first, $second)
     {
@@ -25,6 +26,7 @@ class AngleOperations
             return false;
         }
     }
+
     /**
      * This function sums two addends.
      *
@@ -32,11 +34,12 @@ class AngleOperations
      * @param string $second_addend
      * @param boolean $normal_form If you want to get the result as normal form
      * @param boolean $over_360 If you want to get the result without editing it if it's over 360
-     * @return string
+     * @return bool|string
      */
-    public static function addition($addend = 0, $second_addend = 0, $normal_form = true, $over_360 = false)
+    public static function addition($addend, $second_addend, $normal_form = true, $over_360 = false)
     {
-        $array_addends = SELF::getNumbers($addend, $second_addend);
+        $array_addends = self::getNumbers($addend, $second_addend);
+
         if ($array_addends) {
             $addend_array        = $array_addends[0];
             $second_addend_array = $array_addends[1];
@@ -73,7 +76,10 @@ class AngleOperations
             }
             return $degrees . '° ' . $primes . '\' ' . $seconds . '\'\'';
         }
+
+        return false;
     }
+
     /**
      * This function does a substration between a minuend and a subtrahend.
      *
@@ -81,11 +87,12 @@ class AngleOperations
      * @param string $subtrahend
      * @param boolean $normal_form If you want to get the result as normal form
      * @param boolean $over_360 If you want to get the result without editing it if it's over 360
-     * @return string
+     * @return bool|string
      */
-    public static function subtraction($minuend = 0, $subtrahend = 0, $normal_form = true, $over_360 = false)
+    public static function subtraction($minuend, $subtrahend, $normal_form = true, $over_360 = false)
     {
-        $array_parameters = SELF::getNumbers($minuend, $subtrahend);
+        $array_parameters = self::getNumbers($minuend, $subtrahend);
+
         if ($array_parameters) {
             $minuend_array        = $array_parameters[0];
             $subtrahend_array = $array_parameters[1];
@@ -122,7 +129,10 @@ class AngleOperations
             }
             return $degrees . '° ' . $primes . '\' ' . $seconds . '\'\'';
         }
+
+        return false;
     }
+
     /**
      * This function multiplicates two factors.
      *
@@ -130,11 +140,12 @@ class AngleOperations
      * @param string $second_factor
      * @param boolean $normal_form If you want to get the result as normal form
      * @param boolean $over_360 If you want to get the result without editing it if it's over 360
-     * @return string
+     * @return bool|string
      */
-    public static function multiplication($factor = 0, $second_factor = 0, $normal_form = true, $over_360 = false)
+    public static function multiplication($factor, $second_factor, $normal_form = true, $over_360 = false)
     {
-        $array_factors = SELF::getNumbers($factor, $second_factor);
+        $array_factors = self::getNumbers($factor, $second_factor);
+
         if ($array_factors) {
             $factor_array        = $array_factors[0];
             $second_factor_array = $array_factors[1];
@@ -171,7 +182,10 @@ class AngleOperations
             }
             return $degrees . '° ' . $primes . '\' ' . $seconds . '\'\'';
         }
+
+        return false;
     }
+
     /**
      * This function does a division between a dividend and a divisor.
      *
@@ -179,11 +193,12 @@ class AngleOperations
      * @param string $divisor
      * @param boolean $normal_form If you want to get the result as normal form
      * @param boolean $over_360 If you want to get the result without editing it if it's over 360
-     * @return string
+     * @return bool|string
      */
-    public static function division($dividend = 0, $divisor = 0, $normal_form = true, $over_360 = false)
+    public static function division($dividend, $divisor, $normal_form = true, $over_360 = false)
     {
-        $array_parameters = SELF::getNumbers($dividend, $divisor);
+        $array_parameters = self::getNumbers($dividend, $divisor);
+
         if ($array_parameters) {
             $dividend_array        = $array_parameters[0];
             $divisor_array = $array_parameters[1];
@@ -233,5 +248,8 @@ class AngleOperations
             }
             return $degrees . '° ' . $primes . '\' ' . $seconds . '\'\'';
         }
+
+        return false;
     }
 }
+
